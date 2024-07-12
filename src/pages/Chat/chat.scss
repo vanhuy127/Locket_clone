@@ -1,0 +1,154 @@
+@import "../../variable/variable.scss";
+
+.chat {
+    width: 100%;
+    height: 100%;
+
+    .chat_wrapper {
+        width: 100%;
+        height: 100%;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .receiver {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .avatar {
+                width: 60px;
+                height: 60px;
+                border-radius: 100rem;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .username {
+                color: $text_bigTitle;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+        .chat_box {
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: $box_shadow_around;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow-y: scroll;
+            padding: 10px;
+
+            .chat_item {
+                display: flex;
+                align-items: end;
+                width: 100%;
+                gap: 10px;
+
+                &.own {
+                    flex-direction: row-reverse;
+
+                    .chat_info {
+                        align-items: end;
+
+                        .img {
+                            width: calc(100% - 30px);
+                        }
+                    }
+                }
+
+                .avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100rem;
+                    overflow: hidden;
+                    flex-shrink: 0;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .chat_info {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: flex-start;
+
+                    .img {
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 20px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .message {
+                        font-size: 16px;
+                        background-color: #979797a2;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 20px;
+                    }
+
+                    .time {
+                        color: $text-desc;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .send_btn {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            input {
+                width: 100%;
+                height: 100%;
+                padding: 10px 10px;
+                background-color: $bg-lightGray;
+                font-size: 16px;
+                border-radius: 10px;
+                box-shadow: $inner_shadow;
+            }
+
+            button {
+                width: 100px;
+                height: 100%;
+                border-radius: 10px;
+                background: $bg_color;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}

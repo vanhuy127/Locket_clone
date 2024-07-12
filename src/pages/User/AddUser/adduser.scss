@@ -1,0 +1,116 @@
+@import "../../../variable/variable.scss";
+
+.add_user {
+    display: none;
+
+    &.show {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #cccccc8e;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_wrapper {
+        width: 300px;
+        height: 200px;
+        background: #fff;
+        border-radius: 30px;
+        box-shadow: $box_shadow_around;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .search {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            input {
+                // flex: 1
+                width: 100%;
+                padding: 10px 10px;
+                background-color: $bg-lightGray;
+                font-size: 16px;
+                border-radius: 10px;
+                box-shadow: $inner_shadow;
+            }
+
+            button {
+                padding: 11px 12px;
+                border-radius: 10px;
+                background: $bg_color;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            // overflow-y: scroll;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .avatar {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 100rem;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .sub_info {
+                    font-weight: bold;
+                    flex: 1;
+
+                    .username {
+                        font-size: 16px;
+                        color: $text_bigTitle;
+                    }
+
+                    .desc {
+                        font-size: 14px;
+                        color: $text-desc;
+                        height: 20px;
+                    }
+                }
+
+                button {
+                    padding: 7px 10px;
+                    font-size: 16px;
+                    background: $bg_color;
+                    color: #fff;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    &:disabled {
+                        opacity: 0.6;
+                        cursor: not-allowed;
+                    }
+
+                }
+            }
+        }
+    }
+}

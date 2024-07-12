@@ -1,0 +1,28 @@
+@import "../../variable/variable.scss";
+
+.all_short_cut {
+    width: 100%;
+    height: 100%;
+
+    &_wrapper {
+        width: 100%;
+        height: 100%;
+        padding: 80px 10px 0;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 120px;
+        gap: 10px;
+
+        .shot_cut_item {
+            border-radius: 15px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.list_react {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .react {
+        width: 40px;
+        height: 40px;
+        border-radius: 100rem;
+        overflow: hidden;
+        border: 4px solid #fff;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .react:nth-child(2) {
+        position: absolute;
+        left: 60%;
+    }
+
+    .react:nth-child(3) {
+        position: absolute;
+        left: 120%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eee;
+    }
+
+}
