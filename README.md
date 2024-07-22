@@ -4,7 +4,7 @@ Locket allows user to share their moments through image and chat with each other
 
 ## Technology
 
-- FrontEnd: Reactjs, Sass
+- FrontEnd: Reactjs, Sass, Zustand
 - Database: Firebase
 
 ## Features
